@@ -1,0 +1,8 @@
+{
+  // コミットルール
+  "conventionalCommits.storeScopesGlobally": true,
+  "conventionalCommits.scopes": [],
+  "conventionalCommits.promptBody": false,
+  "conventionalCommits.promptScopes": false,
+  "conventionalCommits.promptFooter": false
+}
