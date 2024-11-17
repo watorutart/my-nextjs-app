@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { css } from "../../styled-system/css";
 
 export default function Home() {
   return (
@@ -22,7 +23,11 @@ export default function Home() {
 
         <div className={styles.ctas}>
           <a
-            className={styles.primary}
+            className={css({
+              backgroundColor: '#ABCDEF',
+              borderColor: 'var(--gray-alpha-200)',
+              minWidth: '180px',
+            })}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
