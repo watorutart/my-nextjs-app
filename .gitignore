@@ -45,4 +45,4 @@ styled-system-studio
 
 # Storybook
 *storybook.log
-src/stories/assets/*
+src/samples/stories/assets/*
