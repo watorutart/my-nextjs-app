@@ -1,0 +1,25 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { expect, within } from '@storybook/test';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+const meta = {
+  title: '{{path}}/{{pascalCase name}}',
+  component: {{pascalCase name}},
+  parameters: {
+    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
+    layout: 'fullscreen',
+  },
+} satisfies Meta<typeof {{pascalCase name}}>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const text = canvas.getByRole('heading', {name: '{{pascalCase name}}'})
+    await expect(text).toBeInTheDocument();
+  },
+};
