@@ -10,7 +10,18 @@ module.exports = function (
         name: 'path',
         message: 'どのディレクトリに作成しますか？ （ex: src/components/)',
       },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'コンポーネント名を入力してください。 （ex: Button)',
+      },
     ],
-    actions: [],
+    actions: [
+      {
+        type: 'add',
+        path: './{{path}}/{{pascalCase name}}/index.tsx',
+        templateFile: 'plop-templates/componentIndex.tsx.hbs'
+      }
+    ],
   });
 }
