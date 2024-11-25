@@ -21,6 +21,11 @@ module.exports = function (
         type: 'add',
         path: './{{path}}/{{pascalCase name}}/index.tsx',
         templateFile: 'plop-templates/componentIndex.tsx.hbs'
+      },
+      {
+        type: 'add',
+        path: './{{path}}/{{pascalCase name}}/{{pascalCase name}}.tsx',
+        templateFile: 'plop-templates/component.tsx.hbs'
       }
     ],
   });
